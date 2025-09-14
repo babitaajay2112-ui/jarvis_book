@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Flow Buttons</title>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: monospace;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .main-container {
+        width: 90%;
+    }
+
+    /* MY PROJECT button */
+    .main-button {
+        display: block;
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 0 auto 30px auto;
+        padding: 10px 30px;
+        color: white;
+        background-color: black;
+        border: 3px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+        text-decoration: none;
+    }
+
+    .main-button:hover {
+        background-color: white;
+        color: black;
+        transform: scale(1.05);
+    }
+
+    .project-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .branch {
+        width: 45%;
+        border: 2px solid gold;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    /* M1 and M2 titles as buttons */
+    .branch-button {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        padding: 8px;
+        border: 2px solid gold;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s;
+        text-decoration: none;
+        display: block;
+    }
+
+    .branch-button:hover {
+        background-color: gold;
+        color: black;
+        transform: scale(1.05);
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        margin: 5px 0;
+    }
+
+    /* Style for all tree buttons */
+    .tree-button {
+        width: 100%;
+        text-align: left;
+        padding: 8px 12px;
+        margin: 3px 0;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        background-color: #111;
+        border: 1px solid gold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+        text-decoration: none;
+        display: block;
+    }
+
+    .tree-button:hover {
+        background-color: gold;
+        color: black;
+        transform: scale(1.05);
+    }
+
+    /* Nested buttons smaller indentation */
+    ul ul .tree-button {
+        margin-left: 15px;
+        font-size: 0.95rem;
+    }
+
+    ul ul ul .tree-button {
+        margin-left: 30px;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- MY PROJECT button linking to my_project.html -->
+        <a href="my_project.html" class="main-button">MY PROJECT</a>
+
+        <!-- Branches Container -->
+        <div class="project-container">
+            <!-- Left Branch: M1 -->
+            <div class="branch">
+                <!-- M1 button linking to m1.html -->
+                <a href="m1.html" class="branch-button">M1</a>
+                <ul>
+                    <li><a href="jarvis.html" class="tree-button">JARVIS</a>
+                        <ul>
+                            <li><a href="calendar.html" class="tree-button">Calendar</a></li>
+                            <li><a href="calculator.html" class="tree-button">Calculator</a></li>
+                            <li><a href="time.html" class="tree-button">Time</a></li>
+                            <li><a href="date.html" class="tree-button">Date</a></li>
+                            <li><a href="youtube.html" class="tree-button">Youtube</a></li>
+                            <li><a href="Speech Recognition.html" class="tree-button">Speech Recognition</a></li>
+                            <li><a href="pyttsx3.html" class="tree-button">Pyttsx3</a></li>
+                            <li><a href="joke.html" class="tree-button">Joke</a></li>
+                            <li><a href="keyword.html" class="tree-button">Keyword</a></li>
+                            <li><a href="random.html" class="tree-button">Random</a></li>
+                            <li><a href="Webbrowser.html" class="tree-button">Webbrowser</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="cv2.html" class="tree-button">CV2</a>
+                        <ul>
+                            <li><button class="tree-button">Access Granted</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Branch: M2 -->
+            <div class="branch">
+                <!-- M2 button linking to m2.html -->
+                <a href="m2.html" class="branch-button">M2</a>
+                <ul>
+                    <li><button class="tree-button">HTML, CSS</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
